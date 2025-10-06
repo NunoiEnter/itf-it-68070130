@@ -1,28 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ITF 2025</title>
-        <link rel="stylesheet" href="styless.css">
-    </head>
-    <body>
-        <nav>
-            <p>68070130</p>
-            <h2>ITF Website</h2>
-            <p>Week 14</p>
-        </nav>
-        <div class="container">
-            <h2 id="my-title"> 私の ITF-SITE へようこそ! </h2>
-            <img src="images.jpg" width="96" alt="Cool" />
-			<hr>
-			<div>
-				<label for="my_input">Enter any number:</label>
-				<input type="number" id="my_input" value="1">
-				<button type="button" onclick="calc(this.innerText)">+1</button>
-				<button type="button" onclick="calc(this.innerText)">-1</button>
-			</div>
-        </div>
-    </body>
-	<script src="script.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <title>ITF Bank - Visual Novel 95</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <span>💾 ITF Bank</span> | <span>ID: itf-it65xxxxxx</span>
+  </nav>
+
+  <!-- VN-style dialog -->
+  <div class="dialog-box">
+    <p>“Welcome, Player. Manage your bank account wisely.”</p>
+  </div>
+
+  <!-- Account Overview -->
+  <section class="window">
+    <div class="title-bar">📂 Account Overview</div>
+    <div class="window-content">
+      <textarea placeholder="Transaction History..."></textarea>
+    </div>
+  </section>
+
+  <!-- Balance Info -->
+  <section class="window">
+    <div class="title-bar">💰 Balance Information</div>
+    <div class="window-content">
+      <input type="number" id="accountBalance" placeholder="Account Balance">
+      <input type="number" id="cashBalance" placeholder="Cash Balance">
+      <button onclick="setBalance()">Set Balance</button>
+    </div>
+  </section>
+
+  <!-- Bank Operation -->
+  <section class="window">
+    <div class="title-bar">🏦 Bank Operation</div>
+    <div class="window-content">
+      <input type="number" id="amount" placeholder="Enter Amount">
+      <button onclick="deposit()">Deposit</button>
+      <button onclick="withdraw()">Withdraw</button>
+    </div>
+  </section>
+
+  <!-- Currency Converter -->
+  <section class="window">
+    <div class="title-bar">💱 Currency Converter</div>
+    <div class="window-content">
+      <input type="number" placeholder="Enter Amount">
+      <select>
+        <option>USD</option>
+        <option>THB</option>
+      </select>
+      <div class="output-box">Converted Value: ...</div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
 </html>

@@ -1,7 +1,15 @@
-const my_input = document.getElementById("my_input")
-let current_value = 1
+function setBalance() {
+  let acc = parseFloat(document.getElementById("accountBalance").value) || 0;
+  let cash = parseFloat(document.getElementById("cashBalance").value) || 0;
+  alert("Balances updated! Account: " + acc + " | Cash: " + cash);
+}
 
-function calc(x) {
-	current_value += Number(x) // Calculate Variable `current_value`
-	my_input.value = current_value // Set my_input Value to `current_value`
+function deposit() {
+  let amt = parseFloat(document.getElementById("amount").value) || 0;
+  alert("Deposited: " + amt);
+}
+
+function withdraw() {
+  let amt = parseFloat(document.getElementById("amount").value) || 0;
+  alert("Withdrew: " + amt);
 }
